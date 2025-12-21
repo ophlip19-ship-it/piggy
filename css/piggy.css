@@ -3,14 +3,23 @@
     padding:0 auto;
 }
 body{
+    margin: 0 auto;
     background-color: #f2f7f8;
-    max-width: 100%;
+    /* max-width: 90%; */
     width: 100%;
+    /* overflow-x:hidden ; */
 }
-header{ margin: 0;
+ header{ margin: 0;
     background-color:#fff;
     align-items: center;
     /* position: fixed; */
+}
+a:hover{
+    background-color: #f76cb8;
+}
+.conteiner{
+    width: 100%;
+    margin: 0 auto;
 }
 .container{
     width: 80%;
@@ -18,23 +27,19 @@ header{ margin: 0;
 }
 .piggy{
     max-width: 100%;
-    margin: 0;
+    margin:0 auto;
 }
 .navbar{
     display: flex;
-    /* flex-wrap: ; */
     position: fixed;
     z-index: 100;
     width: 100%;
-    max-width: 90%;
-    margin: 0;
-    /* align-items: flex-start; */
+    align-items: flex-start;
     justify-content: space-between;
-    padding:  0vh 17vh 0vh 4vh;
-    /* gap: 24 %; */
     background-color: #fff;
 }
 .navbar span{
+    margin: 0 auto;
     display: flex;
     align-items: center;
 }
@@ -50,8 +55,11 @@ nav a{
     justify-items: center;
 }
 .second{
+    padding-top: 2vh;
+    padding-right: 8vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 2vh;
 }
 .sign-in{
@@ -76,7 +84,7 @@ nav a{
     margin: 0 auto;
     top:9vh ;
     z-index: 10;
-    right: -450vh;
+    right: -220vh;
     padding: 100vh auto;
     display: flex;
     flex-direction: column;
@@ -137,6 +145,18 @@ nav a{
 .harm-menu.active span:nth-child(3){
     top: 40%;
     transform: translate(-50%, 50%) rotate(-45deg);
+}
+.resource-ho{
+    display: none;
+    transform: translate(20vh, 8vh);
+    z-index: 1000;
+    position: fixed;
+    width: 30vh;
+    border-radius: 20px;
+    border: white solid 8px;
+    height: 10vh;
+    background-color:rgb(247, 221, 221);
+
 }
 .on1{
     display: flex;
@@ -257,10 +277,20 @@ nav a{
     display: flex;
     flex-wrap: wrap;
     gap: 2vh;
-    margin: 10vh 0;
+    width: 90%;
+    margin: 10vh auto;
 }
 .lock-text{
-    width: 40em;
+    width: 50%;
+}
+.arrow{
+    /* display: flex; */
+    transform: rotateY(-180deg) translateX(0vh);
+}
+.arrow-text{
+    display: flex;
+    gap: 1vh;
+    align-items: center;
 }
 .lock-text h3{
     font-size: 24px;
@@ -268,7 +298,7 @@ nav a{
 }
 .lock-text p{
     margin-top: 16px;
-    max-width: 621px;
+    max-width: 70%;
     font-size: 16px;
 }
 .security{
@@ -300,10 +330,14 @@ nav a{
     background-color: #ffff;
     overflow: hidden;
 }
-.plan1 img{
-    display: block;
-    transform: translateX(20vh) translateY(15vh);
+.only-text{
+    display: flex;
+    /* margin: 0 auto; */
 
+}
+.only-text img{
+    display: inline-flex;
+    transform: rotateY(-180deg) translateY(2vh);
 }
 @keyframes slide {
     0%{
@@ -324,7 +358,13 @@ nav a{
     }
 }
 .slide-loop{
+    display: block;
+    transform: translateX(20vh) translateY(15vh);
     animation: slide 6s infinite;
+    transition-timing-function: 2s;
+}
+.slide-loop:hover{
+    background-color: inherit;
 }
 
 .auto img{
@@ -566,12 +606,14 @@ nav a{
     gap: 3vh;
 } 
 .vid{
-    margin: 10vh 0;
+    margin: 10vh auto;
+    width: 100%;
+    max-width: 100%;
 
 }
 .vid h2{
     display: block;
-    font-size: 3em;
+    font-size: 2em;
     text-align: center;
     margin: 10px auto;
 }
@@ -615,6 +657,15 @@ nav a{
     margin-bottom: 5vh;
     background-color: #fff;
     animation: move 15s linear infinite ;
+}
+
+@keyframes move {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-50%);
+    }
 }
 .wrap{
     display: block;
@@ -661,14 +712,6 @@ nav a{
     margin: 0 auto;
     gap: 2vh;
     justify-content: center;
-}
-@keyframes move {
-    0%{
-        transform: translateY(0);
-    }
-    100%{
-        transform: translateY(-50%);
-    }
 }
 .wrap .account{
     padding: 15px 20px;
@@ -749,16 +792,20 @@ footer{
     margin: 0 auto;
     padding: 10vh;
     background-color: #fff;
+
     width: 100%;
-    max-width: 100%;
+    max-width: 90%;
+}
+hr{
+    margin: 10px auto;
+    max-width: 90%;
 }
 .cover{
     display: flex;
     flex-wrap: wrap;
     gap: 5vh;
     width: 100%;
-    max-width: 90%;
-    border-bottom: #cac0c0 solid 4px;
+    max-width: 100%;
     padding: 10vh 2vh;
 
 }
@@ -808,6 +855,10 @@ footer{
     color: #083e9e;
 }
 @media only screen and (max-width:992px) {
+    body{
+        width: 100%;
+        margin: 0 auto;
+    }
     
     .first-link, .second{
         display:none;
@@ -820,13 +871,14 @@ footer{
         z-index: 999;
     display: flex;
     position: fixed;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     justify-content: space-between;
-}
+    }
 
     .harm-menu{
         display: flex;
+        margin-right: 4vh;
     }
     .off-screenMenu .sign-in{
         display: block;
@@ -838,11 +890,258 @@ footer{
         padding: 10px 22%;
         margin-bottom: 10vh;
     }
+    .lock{
+        margin: 10vh auto;
+        display: block;
+        text-align: center;
+    }
+    .lock-text{
+        display: block;
+        margin: 0 auto;
+    }
     
     .socials a, .socials p{
     display: block;
     text-align: left;
     }
 
+
     
+}
+@media only screen and (max-width:769px) {
+    .fouth{
+        width: 100%;
+        padding: 2vh 0;
+        margin: 0 auto;
+    }
+    footer{
+        padding: 1vh 4vh;
+    }
+    
+    
+}
+@media only screen and (max-width:425px) {
+   .navbar{
+    position: fixed;
+    z-index: 1000;
+   } 
+      .off-screenMenu .account,.off-screenMenu .sign-in{
+        font-size: 20px;
+    }
+    .off-screenMenu{
+        font-size: 20px;
+    }
+ 
+
+    .girlOnPhone img{
+    max-width: 35vh;
+    margin: 0 auto;
+    }
+    
+    .shrink{
+    width: 50%;
+    }
+    
+    .downloads{
+    width: 80%;
+    padding: 1vh 1vh 2vh 0;
+    margin:  10vh auto;
+
+    }
+    .downloads span{
+    font-size: 16px;
+    border-radius: 15px;
+    }
+    .downloads h2{
+    font-size: 2em;
+    }
+    .downloads p{
+    font-size: 16px;
+    line-height: 20px;
+    opacity: 0.8;
+    }
+    .downloads .account{
+    font-size: 16px;
+    }
+    
+    .lock-text{
+        width: 90%;
+    }
+    .lock-text h3{
+        line-height: 30px;
+    }
+    .lock-text p{
+        max-width: 100%;
+    }
+    .plans{
+        display: block;
+        width: 100%;
+        margin: 0 ;
+    }
+    .plan1{
+        margin: 20px auto;
+        background-size: 400% 400%;
+        width: 18em;
+        min-width: 15em;
+        height: 40vh;
+    }
+    .plan1 img{
+        display: block;
+        transform: translateX(15vh) translateY(8vh);
+
+        }
+    @keyframes slide {
+        0%{
+            opacity: 0;
+            transform: translateX(35vh) translateY(30vh);
+        }
+        15%, 40%{
+            opacity: 1;
+            transform: translateX(15vh) translateY(8vh);
+        }
+        55%, 80%{
+            opacity: 1;
+            transform: translateX(-20) translateY(-15);
+        }
+        80%, 100%{
+            opacity: 0;
+            transform: translateX(35vh) translateY(30vh);
+        }
+    }
+    
+    .only-text{
+        display: flex;
+
+    }
+    .only-text img{
+        display: inline-flex;
+        width: 10%;
+        transform: rotateY(-180deg) translateY(-1vh);
+    }
+        
+    .earn{
+        display: block;
+        width: 100%;
+    }
+    .earn p{
+        display:block;
+        width: 100%;
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 400 ;
+        margin-top: 1rem;
+        color: #fed6f1 ;
+    }
+    .div-img{
+        width: 100%;
+        transform: translate(0, 5vh);
+    }
+    .diversify{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+        .diverse, .third{
+            width: 99%;
+            margin: 0 auto;
+
+        }
+        
+    .vid-display{
+        margin: 0 auto;
+        width: 100%;
+    }
+        
+    .photos img{
+        width: 60px;
+
+    }
+    .photos p{
+        padding-top:10px ;
+        width: 50px;
+        height: 40px;
+        font-size: 20px;
+    }
+    .logs{
+        gap: 1vh;
+    }
+    .wrap .account{
+        padding: 15px 20px;
+        font-size: 1.3em;
+    }
+    .fouth{
+        width: 90%;
+    }
+
+    footer{
+        width: 100%;
+        margin: 0 auto;
+        padding: 2vh;
+
+    }
+    hr{
+        margin: 1px auto;
+        max-width: 90%;
+    }
+    .cover{
+        display: flex;
+        flex-direction: column;
+        padding: 2vh 2vh;
+        gap: 2vh;
+
+    }
+    .socials p{
+        display: flex;
+    }
+    
+}
+@media only screen and (max-width:380px) {
+     
+    .girlOnPhone img{
+    max-width: 29vh;
+    margin: 0 auto;
+    }
+    
+    .shrink{
+    width: 40%;
+    }
+    
+    .lock-text p{
+        max-width: 100%;
+    }
+    .plans{
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .plan1{
+        margin: 20px auto;
+        background-size: 200% 200%;
+        width: 14em;
+        min-width: 10em;
+        height: 40vh;
+    }
+    .plan1 img{
+        display: block;
+        transform: translateX(15vh) translateY(8vh);
+
+    }
+    
+    .only-text{
+        display: flex;
+        left: 11%;
+
+    }
+    .only-text img{
+        display: inline-flex;
+        width: 10%;
+        transform: rotateY(-180deg) translateY(-1vh);
+    }
+    .fouth-styled, .fouth-imgs{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
 }
