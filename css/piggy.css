@@ -1,18 +1,16 @@
 *{
     margin: 0;
     padding:0 auto;
+    box-sizing: border-box;
 }
 body{
     margin: 0 auto;
     background-color: #f2f7f8;
-    /* max-width: 90%; */
     width: 100%;
-    /* overflow-x:hidden ; */
 }
  header{ margin: 0;
     background-color:#fff;
     align-items: center;
-    /* position: fixed; */
 }
 a:hover{
     background-color: #f76cb8;
@@ -26,10 +24,13 @@ a:hover{
     margin: 0 auto;
 }
 .piggy{
-    max-width: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
     margin:0 auto;
 }
 .navbar{
+    margin: 0;
     display: flex;
     position: fixed;
     z-index: 100;
@@ -76,8 +77,8 @@ nav a{
 }
 .off-screenMenu{
     background-color: #fff;
-    height: 100vh;
-    max-height: 90%;
+    height: 100%;
+    max-height: 98%;
     width: 100%;
     max-width: 100%;
     position: fixed;
@@ -88,7 +89,7 @@ nav a{
     padding: 100vh auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 5vh;
     align-items: center;
     text-align: center;
     font-size: 32px;
@@ -167,10 +168,9 @@ nav a{
     margin: 0 auto;
 }
 .downloads{
-    width: 25em;
-    padding: 5vh 10vh 2vh 0;
+    width: 60%;
+    padding: 5vh 3vh 2vh 0;
     margin:  10vh auto;
-    /* background-color: #fff; */
 
 }
 .downloads span{
@@ -185,23 +185,35 @@ nav a{
     animation: enter 2s ease-in;
 }
 .downloads h2{
+    width: 60%;
     font-size: 3em;
     margin: 10px 0;
     text-transform: capitalize;
     animation: enter 1s ease-in-out;
 }
-.downloads p{
+.downloads .do-text{
+    width: 60%;
     font-size: 1.5em;
     margin: 20px 0;
     line-height: 1.5em;
     opacity: 0.6;
 }
+
+.log{
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    gap: 2vh;
+    width: 100%;
+    display: flex;
+}
 .downloads .account{
-    margin-right: 20px 20px;
+    display: flex;
+    align-items: center;
     padding: 15px 20px;
-    font-size: 1.3em;
+    gap: 5px;
+    font-size: 24px;
     text-decoration: none;
-    justify-content: space-between;
 }
 @keyframes enter{
     0%, 40%{ 
@@ -323,7 +335,7 @@ nav a{
     /* margin: 10px 0px 10px 0; */
     background-size: 400% 400%;
     padding: 30px;
-    width: 27em;
+    width: 30em;
     min-width: 25em;
     height: 52vh;
     border-radius: 20px;
@@ -332,8 +344,7 @@ nav a{
 }
 .only-text{
     display: flex;
-    /* margin: 0 auto; */
-
+    transform: translate(-2vh, -6vh);
 }
 .only-text img{
     display: inline-flex;
@@ -514,8 +525,6 @@ nav a{
 }
 .en1{
     display: block;
-    transform: translateY(1vh);
-    position: absolute;
 }
 .en2{
     display: block;
@@ -741,8 +750,8 @@ nav a{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    justify-content: space-between;
     justify-content: center;
+    align-items: center;
     margin: 0 auto;
 }
 .fouth-imgs{
@@ -753,7 +762,7 @@ nav a{
 .fouth-imgs img{
     width: 16vh;
     max-width: 100%;
-    height:3vh;
+    height: auto;
     display: block;
 
     padding: 10px;
@@ -780,7 +789,7 @@ nav a{
 }
 .fast span{
     font-size: 0.7em;
-    transform: translateY(0px) translateX(-4px);
+    transform: translate(-5px, -2px);
     
 }
 .cio{
@@ -790,20 +799,23 @@ nav a{
 }
 footer{
     margin: 0 auto;
-    padding: 10vh;
+    padding-top: 10vh 0;
+    height: auto;
     background-color: #fff;
-
-    width: 100%;
-    max-width: 90%;
+    width: 70%;
 }
 hr{
     margin: 10px auto;
     max-width: 90%;
 }
+.pigy{
+    width: 90%;
+    margin: 0 auto;
+}
 .cover{
     display: flex;
     flex-wrap: wrap;
-    gap: 5vh;
+    justify-content: space-between;
     width: 100%;
     max-width: 100%;
     padding: 10vh 2vh;
@@ -842,7 +854,8 @@ hr{
 .cover-last{
     display: block;
     gap: 2vh;
-    height: 10vh;
+    margin: 0 auto;
+    width: 98%;
     padding: 5vh 0;
 }
 .cover-last p{
@@ -853,6 +866,68 @@ hr{
 }
 .glo{
     color: #083e9e;
+}
+@media only screen and (max-width: 1025px) {
+    .piggy{
+        width: 100%;
+    }
+    .on1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 0;
+    margin: 0 auto;
+}
+.downloads{
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 2vh;
+    margin:  10vh auto;
+
+}
+.downloads span{
+    width: 80%;
+    text-align: left;
+}
+.downloads h2{
+    width: 80%;
+    margin: 10px auto;
+    text-align: left;
+}
+.downloads .do-text{
+    text-align: left;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.log{
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+}
+.downloads .account{
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    gap: 5px;
+    font-size: 24px;
+    text-decoration: none;
+}
+.plan1{
+    height: 60vh;
+}
+
+.only-text{
+    display: flex;
+    transform: translate(-2vh, -10vh);
+    align-items: end;
+
+}
+
+
+    
 }
 @media only screen and (max-width:992px) {
     body{
@@ -890,19 +965,47 @@ hr{
         padding: 10px 22%;
         margin-bottom: 10vh;
     }
+ 
+    .on1{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 60px 0;
+        margin: 0 auto;
+    }
+    .downloads{
+        width: 90%;
+        padding: 5px 0;
+        margin:  10vh auto;
+
+    }
+    .downloads span{
+        width: 100%;
+    }
+    .downloads h2{
+        width: 90%;
+    }
+    .downloads .do-text{
+        width: 90%;
+        margin: 20px auto;
+    }
     .lock{
         margin: 10vh auto;
         display: block;
         text-align: center;
     }
     .lock-text{
-        display: block;
+        width: 90%;
+    }
+        
+    .lock-text p{
         margin: 0 auto;
     }
-    
-    .socials a, .socials p{
-    display: block;
-    text-align: left;
+        
+        .socials a, .socials p{
+        display: block;
+        text-align: left;
     }
 
 
@@ -943,7 +1046,7 @@ hr{
     }
     
     .downloads{
-    width: 80%;
+    width: 100%;
     padding: 1vh 1vh 2vh 0;
     margin:  10vh auto;
 
@@ -955,14 +1058,20 @@ hr{
     .downloads h2{
     font-size: 2em;
     }
-    .downloads p{
-    font-size: 16px;
-    line-height: 20px;
-    opacity: 0.8;
+    
+    .downloads .do-text{
+        width: 98%;
+        margin: 20px auto;
+        font-size: 16px;
     }
-    .downloads .account{
+.log{
+    width: 100%;
+    gap: 4px;
+}
+.downloads .account{
     font-size: 16px;
-    }
+    gap: 5px;
+}
     
     .lock-text{
         width: 90%;
@@ -981,7 +1090,7 @@ hr{
     .plan1{
         margin: 20px auto;
         background-size: 400% 400%;
-        width: 18em;
+        width: 21em;
         min-width: 15em;
         height: 40vh;
     }
@@ -1011,12 +1120,14 @@ hr{
     
     .only-text{
         display: flex;
+        align-items: center;
+        gap: 4px;
 
     }
     .only-text img{
         display: inline-flex;
         width: 10%;
-        transform: rotateY(-180deg) translateY(-1vh);
+        transform: rotateY(-180deg) translateY(0vh);
     }
         
     .earn{
@@ -1072,7 +1183,7 @@ hr{
         font-size: 1.3em;
     }
     .fouth{
-        width: 90%;
+        width: 99.9%;
     }
 
     footer{
@@ -1095,10 +1206,30 @@ hr{
     .socials p{
         display: flex;
     }
+    .fouth-styled, .fouth-imgs{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .fouth-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin: 0 auto;
+    }
     
 }
 @media only screen and (max-width:380px) {
-     
+    .logs{
+        display: flex;
+    }
+    .downloads .account{
+        display: flex;
+        align-items: center;
+        gap: 0px;
+    font-size: 12px;
+    } 
     .girlOnPhone img{
     max-width: 29vh;
     margin: 0 auto;
@@ -1119,29 +1250,60 @@ hr{
     .plan1{
         margin: 20px auto;
         background-size: 200% 200%;
-        width: 14em;
+        width: 20em;
         min-width: 10em;
-        height: 40vh;
+        height: 50vh;
     }
+    
     .plan1 img{
         display: block;
-        transform: translateX(15vh) translateY(8vh);
+        transform: translateX(12vh) translateY(12vh);
 
+        }
+    @keyframes slide {
+        0%{
+            opacity: 0;
+            transform: translateX(35vh) translateY(30vh);
+        }
+        15%, 40%{
+            opacity: 1;
+            transform: translateX(12vh) translateY(13vh);
+        }
+        55%, 80%{
+            opacity: 1;
+            transform: translateX(-20) translateY(-15);
+        }
+        80%, 100%{
+            opacity: 0;
+            transform: translateX(35vh) translateY(30vh);
+        }
     }
     
     .only-text{
         display: flex;
         left: 11%;
+        transform: translate(-3vh, 0);
 
     }
     .only-text img{
         display: inline-flex;
         width: 10%;
-        transform: rotateY(-180deg) translateY(-1vh);
+        transform: rotateY(-180deg) translate(0vh, 0vh);
     }
     .fouth-styled, .fouth-imgs{
         display: flex;
         flex-direction: column;
         text-align: center;
     }
+    .fouth-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin: 0 auto;
+    }
+    .cover-last{
+        width: 100%;
+    }
+
 }
